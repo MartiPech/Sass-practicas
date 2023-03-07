@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+
+
+ //////////////////////////////////////////////////////////////////
+ ////////////Variables////////////////////////////////////////////
+ /// ////////////////////////////////////////////////////////////
+
+ $font-p:1.8rem;
+ $font-h1:3rem;
+ $font-h2:2.4rem;
+ $font-h3:2rem;
+ $color:rgb(134,132,132);
+
+ //////////////////////////////////////////////////////////////////
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url('../img/fondo.png');
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: $color;
+    font-weight: bold;
+}
+
+img{
+    width: 80%;
+    height: auto;
+}
+
+nav,
+.presentacion,
+.servicios,
+.footer-content{
+    width: 80%;
+    margin: auto;
+}
+
+.titulo-servicios,
+.presentacion{
+    margin-bottom: 10%;
+}
+
+p{
+    font-size: $font-p;
+    color: $color;
+}
+
+h2{
+    font-size: $font-h2;
+}
+
+h3{
+    font-size: $font-h3;
+    font-weight: lighter; 
+}
+
+.btn{
+    border: none;
+    border-radius: 2px;
+    padding: 0.7em 1.5em;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 50ms ;
+    
+
+}
+
+.btn:hover{
+    
+    transform: scale(1.1);
+}
+
+.btn-principal{
+    @extend .btn;
+    color: #fff;
+    background-color: #6495ED;
+}
+.btn-secundario{
+    @extend .btn;
+    background-color: $color;
+}
+
+@mixin caja-flex($ejex ,$ejey,$wrap){
+    display: flex;
+    align-items: $ejey;
+    justify-content:$ejex;
+}
+
